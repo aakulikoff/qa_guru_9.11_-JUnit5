@@ -87,33 +87,4 @@ public class FilesTest {
     }
 
 
-    @Disabled
-    @Test
-    @DisplayName("Парсинг ZIP файлов")
-    void parseZipFileTest() throws IOException, CsvException {
-        ClassLoader classLoader = this.getClass().getClassLoader();
-        try (InputStream is = classLoader.getResourceAsStream("zip_2MB.zip");
-             ZipInputStream zis = new ZipInputStream(is)) {
-            ZipEntry entry;
-            while ((entry = zis.getNextEntry()) != null) {
-                System.out.println(entry.getName());
-            }
-        }
-    }
-
-
-    @Disabled
-    @Test
-    @DisplayName("Парсинг CSV файлов")
-    void parseCsvFileTest() throws IOException, CsvException {
-        ClassLoader classLoader = this.getClass().getClassLoader();
-        try (InputStream is = classLoader.getResourceAsStream("csv.csv");
-             Reader reader = new InputStreamReader(is)) {
-            CSVReader csvReader = new CSVReader(reader);
-
-            List<String[]> strings = csvReader.readAll();
-            assertEquals(3, strings.size());
-        }
-    }
-
 }
