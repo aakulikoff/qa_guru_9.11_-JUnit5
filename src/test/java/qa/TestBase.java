@@ -1,6 +1,6 @@
 package qa;
 
-import Pages.ParamPage;
+import pages.ParamPage;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Selenide.open;

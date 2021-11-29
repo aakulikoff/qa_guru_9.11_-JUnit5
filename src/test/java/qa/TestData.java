@@ -2,6 +2,6 @@ package qa;
 
 public class TestData {
 
-    public  String
+    public  final String
             MVIDEOURL = "https://www.mvideo.ru/";
 }

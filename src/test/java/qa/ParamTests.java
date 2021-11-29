@@ -14,15 +14,11 @@ public class ParamTests extends TestBase{
     @ValueSource (strings = {"Nintendo switch", "Xbox series", "Sega Mega Drive"})
     @DisplayName("Поиск Nintendo Switch и Xbox в магазине Мвидео")
     @Tags({@Tag("Blocker"), @Tag("Nintendo"), @Tag("Xbox")})
-
     public void mVideoSearchFunTest (String searchItem) {
         paramPage.inputSearchData(searchItem);
         paramPage.clickSearch();
         paramPage.checkSearchResult(searchItem);
     }
-
-
-
 
     @ParameterizedTest ( name = "{displayName} {0} {1}")
 //    @CsvSource({
